@@ -1,0 +1,22 @@
+{
+  "name": "BH Tab Saver",
+  "description": "Extension to save tabs periodically.",
+  "version": "0.1",
+  "permissions": ["tabs", "storage", "alarms"],
+  "browser_action": {
+    "default_title": "open BH Tab Saver",
+    "default_popup": "main.html",
+    "default_icon": {                   
+      "38": "images/icon38.png",
+      "19": "images/icon38.png" 
+    }
+  },
+  "background": {
+    "scripts": ["js/eventpage.js"],
+    "persistent": false
+  },
+  "options_page": "options.html",
+  "manifest_version":2
+}
+
+
