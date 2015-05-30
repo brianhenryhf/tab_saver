@@ -1,0 +1,17 @@
+2015-05-20T00:34:17.288Z at 8:18.  9:02 unchanged.
+
+yeah, maybe i neglected diff from chekc interval and age interval on my extension?  seems to be stuck at the above time for a bit.  but i keep sleeping computer.  
+
+i guess check again, and log when i have machine up.  still, should be checking from last time snap'd.  am i not restarting timer on unsuspend of computer?  or re-synching and restarting timer on unsuspend?  don't need to update again at unsuspend, but do need to CHECK for staleness (and maybe update) at unsuspend.  need to activate and restart chrome alarm maybe?
+
+eventually gets going again.
+
+
+ALSO, when i restarted (and lost everything), it looks like it took a new snapshot.  why?  maybe b/c chrome was updated (which it was)?  happily it kept old ones.  my system works...  oh, extra weird - it shows a snapshot from ~30 mins ago with almost nothing in it. the almost is even weirder - it has the 3 tabs (my pinned tabs in one profile) chrome reopened with.  and nothing else.  older sessions have more, so that's something.  
+  - def make the popup easier to copy a list of links of old sessions out of...
+  
+  
+  
+  
+TODO: put vendor stuff somewhere.  use bower?  or npm + browersify?
+  - use jquery, maybe lodash, bluebird, moment
