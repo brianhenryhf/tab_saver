@@ -3,12 +3,18 @@
 //redo in coffeescript?
 //promises?
 
+//bring in module system
+var $ = $,
+    moment = moment;
+
 //try handlebars or mustache?  ember?
 var formatSnapshot = function(snapshot) {
   var $root = $('<div>');
   $root.addClass('root');
   if(snapshot) {
-    $root.text('Snapshot Date: ' + snapshot.date);
+    //2015-05-30T00:04:17.316Z (ISO) converted to local
+    var snapMoment = moment(snapshot.date);
+    $root.text('Snapshot Date: ' + snapMoment.format('ddd M/D/YY h:mm:ss A') + " (" + snapMoment.fromNow() + ")");
   
     snapshot.windows.forEach(function(window, idx) {
       var $windowElem = $('<div>');
@@ -27,7 +33,7 @@ var formatSnapshot = function(snapshot) {
     $root.text('No Snapshots Available');
   }
   return $root;
-}
+};
 
 
 window.onload = function() {
@@ -38,4 +44,4 @@ window.onload = function() {
     var snappysnap = window.getMostRecentSnapshot();
     $('#display').append(formatSnapshot(snappysnap));
   });
-}
+};
