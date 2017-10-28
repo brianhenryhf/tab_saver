@@ -3,11 +3,14 @@
 (function () {
   'use strict';
 
+  //TODO features
+    //add in snapshot now button - at that point, can remove the other tab extension i use
 
-  //TODO redo in coffeescript?
-  //TODO promises?
-
-  //TODO bring in module system
+  //TODO technical:
+    //redo in coffeescript?
+    //promises?
+    //bring in module system
+    
   //for now, window gives access to scripts loaded in main.html (popup)
   var $ = window.jQuery,
       moment = window.moment;
