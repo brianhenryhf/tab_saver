@@ -6,6 +6,8 @@
   //TODO features
     //add in snapshot now button - at that point, can remove the other tab extension i use
     //consider re-saving snapshot after tab launching?
+    //if only one tab open and has no content, close it after launching all tabs?
+    //reload fxnality - select mulitple tabs and reload
 
   //TODO technical:
     //redo in coffeescript?
