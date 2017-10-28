@@ -95,7 +95,9 @@
   //make available to other scripts through getBackgroundPage
   var Snapshotter = window.Snapshotter = window.Snapshotter || {};
   Snapshotter.getMostRecentSnapshot = getMostRecentSnapshot;
+  Snapshotter.saveSessionInfo = saveSessionInfo;
   Snapshotter.notifyConfigUpdate = notifyConfigUpdate;
+  
 
 
   initConfig(function() {

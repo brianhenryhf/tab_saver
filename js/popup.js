@@ -7,8 +7,8 @@
     //add in snapshot now button - at that point, can remove the other tab extension i use
     //consider re-saving snapshot after tab launching?
     //if only one tab open and has no content, close it after launching all tabs?
-    //reload fxnality - select mulitple tabs and reload
-
+    //some way to force height or temp fake content or some other rendering scheme - as-is sometimes renders with most content hidden and requires re-open of popup until it works.  like umatrix did.  or don't render until everything is loaded up somehow.
+    
   //TODO technical:
     //redo in coffeescript?
     //promises?
@@ -65,6 +65,15 @@
       chrome.tabs.create({url:uri});
     });
   };
+  
+  //exec fxn provided by Snapshotter namespace obj from background page
+  var snapShotterExec = function(fn) {
+    var returnVal;  //BRH NOTE not sure at moment if returnval is an option, as i'm not using, but just in case
+    chrome.runtime.getBackgroundPage(function(window) { //note this is a DOM window object for the event page
+      returnVal = fn(window.Snapshotter);
+    });
+    return returnVal;
+  };
 
   window.onload = function() {
     //on extension button push, should show most recent session info saved for use in restoring  
@@ -72,7 +81,7 @@
 
     //BRH NOTE could use some more general component construct and data- tags to determine what's submitted.  for now, this is fine.
     $('#tab-launcher > .js-submit').on('click', function(evt){
-      console.debug('submit clicked');
+      console.debug('launcher submit clicked');
       var $tabLauncher = $('#tab-launcher'),
           $textInput = $tabLauncher.find('.js-text');
 
@@ -80,9 +89,17 @@
       if (uris) lauchTabs(uris);
     });
 
+    $('#snap-now').on('click', function(evt){
+      console.debug('snap now clicked');
+      snapShotterExec(function(Snapshotter) {
+        Snapshotter.saveSessionInfo();
+        window.location.reload(); //BRH TODO this is crude - use a more complicated means of redrawing tab list.
+      });
+    });
+    
     //could also show list of sessions and let user look at them and compare?
-    chrome.runtime.getBackgroundPage(function(window) { //note this is a DOM window object for the event page
-      var snappysnap = window.Snapshotter.getMostRecentSnapshot();
+    snapShotterExec(function(Snapshotter) {
+      var snappysnap = Snapshotter.getMostRecentSnapshot();
       $('#snap-display').append(formatSnapshot(snappysnap));
     });
   };
