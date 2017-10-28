@@ -27,7 +27,7 @@ function saveOptions() {
       }, 1000);
       
       chrome.runtime.getBackgroundPage(function(window) { 
-        window.notifyConfigUpdate();
+        window.Snapshotter.notifyConfigUpdate();
       });
     });  
   }

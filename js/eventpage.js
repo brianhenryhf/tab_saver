@@ -66,7 +66,6 @@
     });
   };
 
-
   //callback will be invoked with global config object set up
   var initConfig = function(cb) {
     //can't really see sync storage in devtools, which sucks
@@ -93,17 +92,20 @@
     });
   };
 
+  //make available to other scripts through getBackgroundPage
+  var Snapshotter = window.Snapshotter = window.Snapshotter || {};
+  Snapshotter.getMostRecentSnapshot = getMostRecentSnapshot;
+  Snapshotter.notifyConfigUpdate = notifyConfigUpdate;
+
 
   initConfig(function() {
     chrome.runtime.onInstalled.addListener(function() {
-    
-  //not 100% sure this is getting called on initial install...  seem to have empty snapshots array in localStorage?  
-  //well, this did go fine when i installed on another profile.  not sure what the deal is.  some interaction with saving
-  //  options from options page too soon? 
+      //not 100% sure this is getting called on initial install...  seem to have empty snapshots array in localStorage?  
+      //well, this did go fine when i installed on another profile.  not sure what the deal is.  some interaction with saving
+      //  options from options page too soon? 
       saveSessionInfo();
       chrome.alarms.create('tabSave', {periodInMinutes: config.saveIntervalMins});
     });
-
 
     //have to have this at top level (on in onInstalled, which only runs once).  
     //  when event page loads again, the listener needs to be associated
@@ -121,5 +123,5 @@
   chrome.runtime.onSuspend.addListener(function() {
     console.log("Unloading.");
     chrome.browserAction.setBadgeText({text: ""});
-  });
+  }); //end initconfig
 }());

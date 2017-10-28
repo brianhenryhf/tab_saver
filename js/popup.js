@@ -5,8 +5,9 @@
   //TODO promises?
 
   //TODO bring in module system
-  var $ = $,
-      moment = moment;
+  //for now, window gives access to scripts loaded in main.html (popup)
+  var $ = window.jQuery,
+      moment = window.moment;
 
   //TODO try handlebars or mustache?  ember?
   var formatSnapshot = function(snapshot) {
@@ -39,11 +40,12 @@
 
   window.onload = function() {
     //on extension button push, should show most recent session info saved for use in restoring  
-    
+    console.debug('popup onload'); //note this is off by default in chrome console
+
     //could also show list of sessions and let user look at them and compare?
     chrome.runtime.getBackgroundPage(function(window) { //note this is a DOM window object for the event page
-      var snappysnap = window.getMostRecentSnapshot();
-      $('#display').append(formatSnapshot(snappysnap));
+      var snappysnap = window.Snapshotter.getMostRecentSnapshot();
+      $('#snap-display').append(formatSnapshot(snappysnap));
     });
   };
 }());
