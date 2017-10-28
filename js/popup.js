@@ -5,6 +5,7 @@
 
   //TODO features
     //add in snapshot now button - at that point, can remove the other tab extension i use
+    //consider re-saving snapshot after tab launching?
 
   //TODO technical:
     //redo in coffeescript?
