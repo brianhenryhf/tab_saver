@@ -1,14 +1,14 @@
 (function () {
   'use strict';
 
-  //redo in coffeescript?
-  //promises?
+  //TODO redo in coffeescript?
+  //TODO promises?
 
-  //bring in module system
+  //TODO bring in module system
   var $ = $,
       moment = moment;
 
-  //try handlebars or mustache?  ember?
+  //TODO try handlebars or mustache?  ember?
   var formatSnapshot = function(snapshot) {
     var $root = $('<div>');
     $root.addClass('root');
@@ -40,7 +40,7 @@
   window.onload = function() {
     //on extension button push, should show most recent session info saved for use in restoring  
     
-    //could also show list of sessions and let user look at them and compare.
+    //could also show list of sessions and let user look at them and compare?
     chrome.runtime.getBackgroundPage(function(window) { //note this is a DOM window object for the event page
       var snappysnap = window.getMostRecentSnapshot();
       $('#display').append(formatSnapshot(snappysnap));
