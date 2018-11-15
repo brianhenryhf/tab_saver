@@ -1,0 +1,28 @@
+notes on 
+publihsing tab saveer
+
+
+something like https://chrome.google.com/webstore/developer/edit/gnggceapedpenaceiecldpigigghfkll?pli=1
+
+
+
+- need a non-identifying google acct, as it will publish with your name
+
+128x128 icon is handy, as are screenshots
+
+can keep private to those wiith link "unlisted"
+
+oh, can add GA.. hmm. i should do that.
+
+ideally have a developer site, but i guess don't let that hold back.  have to verify ownership of site with google
+
+might have to pay 5 bucks to be verified
+
+
+note i added bitpandev@gmail.com account, so can use that.  listing publishes the local part of your email (and i don't want brian.henry1 out there...)
+
+-- tentative text
+
+An extension that periodically backs up your tabs to local storage, in case of browser/window crash, accidental window close, etc.  If that happens, can click extension icon, see old tab links listed and copy/paste them to launch box to restore.
+
+At the moment, it's ugly, but it works.
