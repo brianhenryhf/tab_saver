@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
- <link rel="stylesheet" type="text/css" href="/css/styles.css">
- <script src="/js/jquery-2.1.4.js"></script>
- <script src="/js/options.js"></script>
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <script src="/vendor/jquery/jquery-2.1.4.js"></script>
+    <script src="/js/options.js"></script>
+  </head>
 
-<div class="option"><label for="numSnapshots"># of snapshots to save:</label><input type="text" id="numSnapshots"></div>
-<div class="option"><label for="saveIntervalMins">Minutes between saves:</label><input type="text" id="saveIntervalMins" /></div>
-<button id="save">Save</button>
-<div id="status"></div>
-</body>
+  <body>
+    <div class="option">
+      <label for="numSnapshots"># of snapshots to save:</label>
+      <input type="text" id="numSnapshots" />
+    </div>
+    <div class="option">
+      <label for="saveIntervalMins">Minutes between saves:</label>
+      <input type="text" id="saveIntervalMins" />
+    </div>
+    <button id="save">Save</button>
+    <div id="status"></div>
+  </body>
 </html>

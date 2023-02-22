@@ -4,13 +4,12 @@
   'use strict';
 
   //TODO features
-    //add in snapshot now button - at that point, can remove the other tab extension i use
     //consider re-saving snapshot after tab launching?
     //if only one tab open and has no content, close it after launching all tabs?
     //some way to force height or temp fake content or some other rendering scheme - as-is sometimes renders with most content hidden and requires re-open of popup until it works.  like umatrix did.  or don't render until everything is loaded up somehow.
+    //maybe make it easier to launch window - button by tab list that just creates the tabs and window.  for recovery.
     
   //TODO technical:
-    //redo in coffeescript?
     //promises?
     //bring in module system
     
