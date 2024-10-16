@@ -6,7 +6,8 @@ backup functionality, and reopen those tabs.
 
 ## Why?
 **The problem:** Chrome provides a "Continue where you left off" startup feature, to reopen your windows/tabs when you open 
-the app. Rarely, but not never, Chrome will open and NOT do that. Or, on rare occasion, it may open only one window.
+the app. Rarely, but not never, Chrome will open and NOT do that. Or, on rare occasion, it may open only one window. (And 
+sometimes, IIRC, a single window can crash and "Reopen Closed Tab" will not restore it.)
 If you're like me, and leave gads of tabs open at all times, you then feel the stomach-clenching pain of losing all
 that knowledge/todos/etc.  This extension gives you a fallback plan - pop it open and you'll see a fairly recent list
 of all your windows and their tabs - open new windows, copy the urls from a window in the list and pop them in the 
@@ -20,6 +21,10 @@ forget about - but hey, you tried.
 ## Installation
 Installation thus far has been via `chrome://extensions` and enabling "Developer mode", then drag the extension folder
 to the extension tab or click the "Load unpacked".
+
+## Configuration
+Basically, using the "Options" item in Chrome's kebab menu for the extension, you can set the number of backups and interval 
+at which to backup.
 
 ## Caveat
 The code is messy, the UI is devoid of styling, and the JS style is ancient (yes, JQuery is in there...).  Time 
