@@ -18,6 +18,12 @@ Another use can be to save off a window of tabs as you realize you are not curre
 back to some day.  Throw that list of tabs in a text file and save it somewhere you will (if you are like me) inevitably
 forget about - but hey, you tried.
 
+## Screenshots
+In all its current glorious form:
+
+<img width="1262" alt="Screenshot 2024-10-29 at 8 48 37 PM" src="https://github.com/user-attachments/assets/2e5d651f-5750-450f-b6df-3793c958f0bc">
+
+
 ## Installation
 Installation thus far has been via `chrome://extensions` and enabling "Developer mode", then drag the extension folder
 to the extension tab or click the "Load unpacked".
