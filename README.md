@@ -33,5 +33,5 @@ Basically, using the "Options" item in Chrome's kebab menu for the extension, yo
 at which to backup.
 
 ## Caveat
-The code is messy, the UI is devoid of styling, and the JS style is ancient (yes, JQuery is in there...).  Time 
-permitting, some of those problems may be ameliorated.
+The code is messy, the UI is devoid of styling, and the JS style is ancient (yes, JQuery is in there...). Also, tab groups and window naming postdate
+active work on this. Time permitting, some of these may be addressed.
