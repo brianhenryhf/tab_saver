@@ -14,6 +14,8 @@
     //bring in module system
     
   //for now, window gives access to scripts loaded in main.html (popup)
+
+  // TODO - still using jquery. probably time to update that and use modern techniques, vanillajs or a framework.
   var $ = window.jQuery,
       moment = window.moment;
 

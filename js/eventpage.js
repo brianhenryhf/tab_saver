@@ -92,7 +92,9 @@
     });
   };
 
-  //make available to other scripts through getBackgroundPage
+
+
+  //make available to other scripts through getBackgroundPage - this will be a problem in manifest v3. chrome.runtime.getBackgroundPage is also deprecated for this pupose. need to post messages instead.
   var Snapshotter = window.Snapshotter = window.Snapshotter || {};
   Snapshotter.getMostRecentSnapshot = getMostRecentSnapshot;
   Snapshotter.saveSessionInfo = saveSessionInfo;
